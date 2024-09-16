@@ -65,7 +65,7 @@ export async function getWeekSummary() {
       })
       .from(goalsCompletedInWeek)
       .groupBy(goalsCompletedInWeek.completedAtDate)
-      .orderBy(desc(goalsCompletedInWeek.completedAt))
+      .orderBy(desc(goalsCompletedInWeek.completedAtDate))
   );
 
   const result = await db
